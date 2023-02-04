@@ -1,0 +1,15 @@
+.sliderContainer {
+    width: 100%;
+    position: absolute;
+
+}
+
+.imageSlider {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    background-size: contain !important;
+    height:auto;
+    max-width: 100%;
+
+}
