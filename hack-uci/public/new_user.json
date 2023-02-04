@@ -1,0 +1,22 @@
+{
+    "users": [
+        {
+            "username": "hiyah",
+            "password": "hacker",
+            "bio": "UCI 25'",
+            "pfp": "https://goo.su/logos/logo_blue_white.png",
+            "followers": 0,
+            "posts": []
+        },
+        {
+            "username": "edge",
+            "password": "case",
+            "bio": null,
+            "pfp": null,
+            "followers": null,
+            "posts": null
+        }
+        
+    ]
+}
+

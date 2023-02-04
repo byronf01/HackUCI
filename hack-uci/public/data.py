@@ -1,0 +1,1 @@
+{22: {'date': '01/02/2023 19:38:41', 'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Convex_lens_%28magnifying_glass%29_and_upside-down_image.jpg/341px-Convex_lens_%28magnifying_glass%29_and_upside-down_image.jpg', 'description': 'The Thinker ', 'tags': ['Bio', 'Chem'], 'authorID': 1857305, 'likes': 0, 'comments': []}}

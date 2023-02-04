@@ -5,6 +5,12 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@fullcalendar/core": "^6.1.1",
+    "@fullcalendar/daygrid": "^6.1.1",
+    "@fullcalendar/interaction": "^6.1.1",
+    "@fullcalendar/list": "^6.1.1",
+    "@fullcalendar/react": "^6.1.2",
+    "@fullcalendar/timegrid": "^6.1.1",
     "@mui/icons-material": "^5.11.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
