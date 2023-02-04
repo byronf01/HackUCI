@@ -1,9 +1,10 @@
 import { useState } from "react";
-import FullCalendar, { formatDate } from "@fullcalendar/react";
+import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
+import { formatDate } from '@fullcalendar/core';
 import {
   Box,
   List,
@@ -12,8 +13,8 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import Topbar from "../../components/topbar/Topbar";
-import { tokens } from "../../components/topbar/theme";
+import Topbar from '../../../components/topbar/Topbar';
+import { tokens } from "../../../components/theme";
 
 const Calendar = () => {
     const theme = useTheme();
@@ -48,7 +49,7 @@ const Calendar = () => {
 
 
 return (
-    <Box m="20px">
+    <Box m="0px">
       <Topbar title="Calendar" subtitle="Full Calendar Interactive Page" />
 
       <Box display="flex" justifyContent="space-between">
@@ -65,7 +66,7 @@ return (
               <ListItem
                 key={event.id}
                 sx={{
-                  backgroundColor: colors.greenAccent[500],
+                  backgroundColor: colors.blueAccent[800],
                   margin: "10px 0",
                   borderRadius: "2px",
                 }}
@@ -74,11 +75,11 @@ return (
                   primary={event.title}
                   secondary={
                     <Typography>
-                      {/* {formatDate(event.start, {
+                      {formatDate(event.start, {
                         year: "numeric",
                         month: "short",
                         day: "numeric",
-                      })} */}
+                      })}
                     </Typography>
                   }
                 />
@@ -88,9 +89,9 @@ return (
         </Box>
 
         {/* CALENDAR */}
-        <Box flex="1 1 100%" ml="15px">
+        <Box flex="1 1 75%" ml="5px">
           <FullCalendar
-            height="75vh"
+            height="92vh"
             plugins={[
               dayGridPlugin,
               timeGridPlugin,
@@ -110,6 +111,7 @@ return (
             select={handleDateClick}
             eventClick={handleEventClick}
             eventsSet={(events) => setCurrentEvents(events)}
+            themeSystem = 'standard'
             initialEvents={[
               {
                 id: "12315",
