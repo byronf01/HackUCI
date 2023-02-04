@@ -1,4 +1,5 @@
 from random import randint
+import datetime
 
 class Account(object):
     def __init__(self, username: str, password: str, pfp: str, bio: str, followers: int, posts=[]):
@@ -8,6 +9,7 @@ class Account(object):
         self.pfp = pfp
         self.bio = bio
         self.followers = 0
+        self.joinDate = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         self.posts = posts
     
     def login(self, username, password) -> bool:
@@ -36,4 +38,15 @@ class Account(object):
             self.posts.remove(id)
         else:
             self.posts.append(id)
-            
+
+    def toString(self):
+        s = ""
+        s += f"ID: {self.id}"
+        s += f"Username: {self.username}"
+        s += f"Password: {self.password}"
+        s += f"PFP link: {self.pfp}"
+        s += f"Bio: {self.bio}"
+        s += f"Followers: {self.followers}"
+        s += f"Join Date: {self.joinDate}"
+        s += f"Post IDs: {self.posts}"
+        return s
