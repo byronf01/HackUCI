@@ -22,6 +22,7 @@ def read_new(): # returns dict of Posts
             p["image"],
             p["description"],
             p["tags"],
+            p["authorID"],
             p["likes"],
             p["comments"],
         )
@@ -48,6 +49,7 @@ def get_old(): # returns dict of Posts
             p["image"],
             p["description"],
             p["tags"],
+            p["authorID"],
             p["likes"],
             p["comments"],
         )
@@ -67,7 +69,7 @@ def write_data(posts: dict[Post]):
     new_data = dict()
 
     for id, p in posts.items():
-        new_data[id] = {"date": p.date, "image": p.image, "description": p.description, "tags": p.tags, "likes": p.likes, "comments": p.comments}
+        new_data[id] = {"date": p.date, "image": p.image, "description": p.description, "tags": p.tags, "authorID": p.authorID, "likes": p.likes, "comments": p.comments}
     all_posts = json.dumps(new_data, indent=4)
     # write final changes to data.json
     with open(new_path, 'w') as storage:

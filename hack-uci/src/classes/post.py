@@ -66,6 +66,7 @@ class Post():
         s += f"Image: {self.image}\n"
         s += f"Description: {self.description}\n"
         s += f"Tags: {self.tags}\n"
+        s += f"AuthorID: {self.authorID}\n"
         s += f"Likes: {self.returnLikes()}\n"
         s += f"Comments: {self.returnComments()}\n"
         return s
