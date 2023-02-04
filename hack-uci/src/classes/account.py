@@ -1,5 +1,5 @@
 from random import randint
-import datetime
+from datetime import datetime 
 
 class Account(object):
     def __init__(self, username: str, password: str, bio: str, followers=0, posts=[], pfp="https://i.pinimg.com/originals/73/17/a5/7317a548844e0d0cccd211002e0abc45.jpg"):
