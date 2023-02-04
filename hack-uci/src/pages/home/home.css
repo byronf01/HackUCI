@@ -1,0 +1,16 @@
+.homeContainer{
+    display: flex;
+    width: 100%;
+
+}
+
+.rsis-image {
+    background-size: contain !important;
+    display: flex;
+
+}
+
+.ImageSlider {
+    background-size: contain !important;
+    display: flex;
+}

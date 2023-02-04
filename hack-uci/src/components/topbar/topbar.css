@@ -9,7 +9,7 @@
 }
 
 .topbarLeft{
-    flex: 4;
+    flex: 3;
 
 }
 .topbarCenter{
@@ -17,7 +17,7 @@
 
 }
 .topbarRight{
-    flex: 3;
+    flex: 2;
 
 }
 
@@ -64,7 +64,7 @@
 }
 
 .topbarRight{
-    flex: 4;
+    flex: 3;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -75,6 +75,7 @@
     margin-right: 10px;
     font-size: 14px;
     cursor: pointer;
+    align-items: right;
 
 }
 
