@@ -8,9 +8,9 @@ export default function Topbar() {
     return (
       <div className="topbarContainer">
         <ul className="topbarLeft">
-              <li>
+              <ui>
                 <NavLink to="/" className="logo">DeadlyHacks</NavLink>
-              </li>
+              </ui>
           </ul>
         <div className="topbarCenter">
           <div className="searchbar">
@@ -25,15 +25,15 @@ export default function Topbar() {
           {/* <div className="topbarLinks"> */}
           <nav>
             <ul className="topbarRight">
-            <li>
-                <NavLink to="/clubs" className="topbarLinks">Clubs</NavLink>
-              </li>
-              <li>
+            <ui>
+                <NavLink to="/profile" className="topbarLinks">Profile</NavLink>
+              </ui>
+              <ui>
                 <NavLink to="/post" className="topbarLinks">Post</NavLink>
-              </li>
-              <li>
+              </ui>
+              <ui>
                 <NavLink to="/calendar" className="topbarLinks">Calendar</NavLink>
-              </li>
+              </ui>
             </ul>
           </nav>
             {/* <span className="topbarLink">Friends</span>
