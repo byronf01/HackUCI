@@ -8,7 +8,7 @@ from pathlib import Path
 
 class Post():
 
-    def __init__(self, date: str, image: str, description: str, tags: list[str], likes=0, comments=[]):
+    def __init__(self, date: str, image: str, description: str, tags: list[str], authorID: int, likes=0, comments=[]):
         # updates and checks current ID 
         newFile = os.path.join(
         os.path.dirname(__file__), "..", "classes", "currentid.py"
@@ -28,9 +28,12 @@ class Post():
             self.date = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         else:
             self.date = date
+
+        
         self.image = image  # image as url
         self.description = description
         self.tags = tags
+        self.authorID = authorID
         if likes: self.likes = likes
         else: self.likes = 0
         if comments: self.comments = comments
