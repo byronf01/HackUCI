@@ -1,1 +1,55 @@
-{"date": "03/02/2023 22:38:41", "description": "Went to ShareteaUCI today! ", "likes": 0, "comments": []}
+{
+    "1": {
+        "date": "03/02/2023 22:38:41",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Hot_dog_with_mustard.png",
+        "description": "Went to ShareteaUCI today! ",
+        "tags": [
+            "STEM",
+            "CS"
+        ],
+        "likes": 0,
+        "comments": []
+    },
+    "2": {
+        "date": "04/02/2023 22:38:41",
+        "image": "a",
+        "description": "BBQ tmrw ",
+        "tags": [],
+        "likes": 0,
+        "comments": []
+    },
+    "3": {
+        "date": "04/02/2023 23:38:41",
+        "image": "a",
+        "description": "Hi anteaters ",
+        "tags": [
+            "STEM",
+            "Bio",
+            "Sports"
+        ],
+        "likes": 0,
+        "comments": []
+    },
+    "4": {
+        "date": "03/02/2023 22:39:41",
+        "image": "a",
+        "description": "B) ",
+        "tags": [
+            "Chem",
+            "Bio",
+            "Sports"
+        ],
+        "likes": 0,
+        "comments": []
+    },
+    "5": {
+        "date": "03/02/2023 22:38:43",
+        "image": "a",
+        "description": "Come watch the football game happening this Sunday ",
+        "tags": [
+            "Sports"
+        ],
+        "likes": 0,
+        "comments": []
+    }
+}

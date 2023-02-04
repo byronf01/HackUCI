@@ -44,6 +44,13 @@ class Post():
 
     def returnComments(self):
         return self.comments
-
-if __name__ == "__main__":
-    print("bruh")
+    
+    def toString(self):
+        s = ""
+        s += f"Date: {self.returnPostTime()}\n"
+        s += f"Image: {self.image}\n"
+        s += f"Description: {self.description}\n"
+        s += f"Tags: {self.tags}\n"
+        s += f"Likes: {self.returnLikes()}\n"
+        s += f"Comments: {self.returnComments()}\n"
+        return s
