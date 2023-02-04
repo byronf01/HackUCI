@@ -24,9 +24,11 @@
 .logo{
     font-size: 30px;
     margin-left: 15px;
+    margin-right: 15px;
     font-weight: bold;
-    color: white;
+    color: rgb(223, 160, 160);
     cursor: pointer;
+    text-shadow: 1px 2px #eaeaea;
 }
 
 .topbarImg {

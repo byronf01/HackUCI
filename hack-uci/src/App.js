@@ -1,7 +1,9 @@
 import Home from "./pages/home/Home"
+import Club from "./pages/Clubs/Club"
 
 function App() {
-  return <Home/>
+  return <Club/>
 }
 
 export default App;
+

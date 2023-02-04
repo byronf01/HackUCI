@@ -2,20 +2,20 @@ import Topbar from "../../components/topbar/Topbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Slider from "../../components/imageSlider/ImageSlider";
 import "./home.css"
+import BottomBar from "../../components/bottombar/Bottombar"
 
-
-const images = [ {url: "/Assets/Test1.jpg"}, {url: "/Assets/Test2.jpg"}, {url: "/Assets/Test3.jpg"}]
 
 
 export default function Home(){
     return(
         <>
             <Topbar/>
-            <Slider/>
-                
+
             <div className="homeContainer">
-                <Sidebar/>
+                <Slider/>
             </div>
+            <BottomBar/>
+
      </>
 
     )
