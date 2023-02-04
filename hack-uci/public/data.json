@@ -1,11 +1,11 @@
 {
     "1": {
-        "date": "03/02/2023 22:38:41",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Hot_dog_with_mustard.png",
-        "description": "Went to ShareteaUCI today! ",
+        "date": "01/02/2023 19:38:41",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Convex_lens_%28magnifying_glass%29_and_upside-down_image.jpg/341px-Convex_lens_%28magnifying_glass%29_and_upside-down_image.jpg",
+        "description": "The Thinker ",
         "tags": [
-            "STEM",
-            "CS"
+            "Bio",
+            "Chem"
         ],
         "likes": 0,
         "comments": []
@@ -48,6 +48,17 @@
         "description": "Come watch the football game happening this Sunday ",
         "tags": [
             "Sports"
+        ],
+        "likes": 0,
+        "comments": []
+    },
+    "7": {
+        "date": "01/02/2023 19:38:41",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Convex_lens_%28magnifying_glass%29_and_upside-down_image.jpg/341px-Convex_lens_%28magnifying_glass%29_and_upside-down_image.jpg",
+        "description": "The Thinker ",
+        "tags": [
+            "Bio",
+            "Chem"
         ],
         "likes": 0,
         "comments": []

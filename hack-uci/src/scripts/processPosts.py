@@ -25,7 +25,7 @@ def read_new(): # returns dict of Posts
             p["likes"],
             p["comments"],
         )
-        new_posts[Post.ID] = new_post
+        new_posts[new_post.id] = new_post
 
     return new_posts
     

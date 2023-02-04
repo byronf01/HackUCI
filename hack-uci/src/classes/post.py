@@ -1,17 +1,29 @@
 import sys
 sys.path.insert(0, '.')
-
+import os 
 from datetime import datetime
 from src.classes.comment import Comment
 from PIL import Image
+from pathlib import Path
 
 class Post():
 
-    ID = 0
-
     def __init__(self, date: str, image: str, description: str, tags: list[str], likes=0, comments=[]):
-        Post.ID += 1
-        self.id = Post.ID
+        # updates and checks current ID 
+        newFile = os.path.join(
+        os.path.dirname(__file__), "..", "classes", "currentid.py"
+        )
+        new_path = Path(newFile)
+        
+        ID = int(open(new_path, 'r').read())
+        if ID == None:
+            raise ValueError("No ID currently in currentid.py")
+        self.id = ID
+        ID += 1
+        with open(new_path, 'w') as f:
+            f.write(str(ID))
+
+
         if date == None:
             self.date = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         else:
