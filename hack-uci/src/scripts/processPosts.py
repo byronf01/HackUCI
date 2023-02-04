@@ -37,6 +37,7 @@ def get_old(): # returns dict of Posts
     
     with open(new_path, "r") as f:
         adict = f.read()
+    if adict == "": return dict()
     adict = eval(adict)
    
     old_data = dict()
@@ -85,7 +86,10 @@ if __name__ == "__main__":
     new_changes = read_new()
     # print_posts(new_changes)
     old = get_old()
-    old.update(new_changes)
+    if old: 
+        old.update(new_changes)
+    else: 
+        old = new_changes
     write_data(old)
     
 
