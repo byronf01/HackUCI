@@ -1,15 +1,15 @@
 import os
 import json
-import sys
 from classes.post import Post
+from pathlib import Path
 
+ROOT_DIR = os.path.abspath(os.curdir)
 
 if __name__ == "__main__":
-    sys.path.insert(0, '/classes/post.py')
+
     newPost = Post("Went to ShareteaUCI today! ")
+    foo = ROOT_DIR + "/public/data.json"
+    new_path = Path(foo)
 
-    __location__ = os.path.realpath(os.path.join(
-        os.getcwd(), os.path.dirname(__file__)))
-
-    with open(os.path.join(__location__, 'sample.json'), "w") as outfile:
+    with open(new_path, "w") as outfile:
         json.dump(newPost.__dict__, outfile)
