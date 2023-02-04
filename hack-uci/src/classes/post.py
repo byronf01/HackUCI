@@ -1,12 +1,19 @@
 from datetime import datetime
 from classes.comment import Comment
+from PIL import Image
 
 
 class Post():
 
-    def __init__(self, description):
+    ID = 0
+
+    def __init__(self, image: str, description: str, tags: list[str]):
+        ID += 1
+        self.id = ID
         self.date = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+        self.image = image  # image as url
         self.description = description
+        self.tags = tags
         self.likes = 0
         self.comments = []
 
