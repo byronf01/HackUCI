@@ -1,4 +1,4 @@
-export const posts = [
+export const Posts = [
              {
             id: 22,
             date: "01/02/2023 19:38:41",
@@ -8,7 +8,7 @@ export const posts = [
                 "Bio",
                 "Chem"
             ],
-            authorID: 1857305,
+            authorID: 4257940,
             likes: 0,
             comments: 3
         },
@@ -26,28 +26,28 @@ export const posts = [
             comments: 2
         }
     ]
-/*
-    "accounts": {
-        "5364386": {
-            "username": "hiyah",
-            "password": "hacker",
-            "bio": "UCI 25'",
-            "pfp": "https://goo.su/logos/logo_blue_white.png",
-            "followers": 0,
-            "joinDate": "04/02/2023 17:13:06",
-            "posts": [
-                35
-            ]
-        },
-        "4257940": {
-            "username": "edge",
-            "password": "case",
-            "bio": "",
-            "pfp": "https://i.pinimg.com/originals/73/17/a5/7317a548844e0d0cccd211002e0abc45.jpg",
-            "followers": 0,
-            "joinDate": "04/02/2023 17:13:06",
-            "posts": []
-        }
+
+export const Users = [
+    {
+        userID: 5364386,
+        username: "hiyah",
+        password: "hacker",
+        bio: "UCI 25'",
+        pfp: "https://goo.su/logos/logo_blue_white.png",
+        followers: 0,
+        joinDate: "04/02/2023 17:13:06",
+        posts: [
+            35
+        ]
+    },
+    {
+        userID: 4257940,
+        username: "edge",
+        password: "case",
+        bio: "",
+        pfp: "https://i.pinimg.com/originals/73/17/a5/7317a548844e0d0cccd211002e0abc45.jpg",
+        followers: 0,
+        joinDate: "04/02/2023 17:13:06",
+        posts: [ 22 ]
     }
-}
-*/
+]

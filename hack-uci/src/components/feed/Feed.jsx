@@ -1,7 +1,7 @@
 import "./feed.css"
 import Share from "../Share/Share";
 import Post from "../Post/Post"
-import {posts} from "../../test_data"
+import {Posts} from "../../test_data"
 
 export default function Feed() {
     return (
@@ -9,9 +9,9 @@ export default function Feed() {
 
             <div className="feedWrapper">
                 <Share/>
-                {posts.map((p)=> (
-                    <Post key={p.id} post={p} />
-                ))}
+                {Posts.map((p) => (
+          <Post key={p.id} post={p} />
+        ))}
             </div>
         </div>
     )

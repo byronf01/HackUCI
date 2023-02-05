@@ -1,6 +1,7 @@
 import "./topbar.css";
 import SearchIcon from '@mui/icons-material/Search';
 import { BrowserRouter, Route, NavLink } from "react-router-dom";
+import Login from "../../pages/Login/Login"
 
 
 
@@ -34,8 +35,8 @@ export default function Topbar() {
               </ui>
             </ul>
           </nav>
-          <NavLink to="/log_in" className="nav-bar-link">
-          <img src="/Assets/Image1.png" alt="" className="topbarImg"/></NavLink>
+          {/* <NavLink to="/login" className="nav-bar-link"> */}
+          <img src="/Assets/Image1.png" alt="" className="topbarImg"/>
         </div>
     );
   }

@@ -6,6 +6,7 @@ import Calendar from './pages/home/calendar/calendar';
 import Club from './pages/Clubs/Club';
 import Error from './pages/home/Error';
 import Layout from './components/topbar/layout';
+import Login from './pages/Login/Login'
  
 export default function App() {
   return (
@@ -14,7 +15,8 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="Calendar" element={<Calendar />} />
-           <Route path="Post" element={<Club />} />  
+           <Route path="Post" element={<Club />} />
+           <Route path="Profile" element={<Login/>} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
