@@ -88,7 +88,8 @@ def write_data(posts: dict[Post], new_pairs):
     # match post ids to accounts
     for authorID, postID in new_pairs:
         try:
-            data["accounts"]["posts"].append(postID)
+            if postID in data["accounts"][str(authorID)]["posts"]: continue
+            else: data["accounts"][str(authorID)]["posts"].append(postID)
         except:
             raise KeyError("No author exists for this post")
     
@@ -105,6 +106,12 @@ def write_data(posts: dict[Post], new_pairs):
         adict = f.read()
         cur = eval(adict)
         cur["posts"] = new_data
+    for authorID, postID in new_pairs:
+        try:
+            if postID in cur["accounts"][authorID]["posts"]: continue
+            else: cur["accounts"][authorID]["posts"].append(postID)
+        except:
+            raise KeyError("No author exists for this post")
     os.remove(np)
     with open(np, 'w') as f:
         f.write(str(cur))
