@@ -10,7 +10,7 @@ export default function Slider() {
     return (
         <div className="sliderContainer">
             <SimpleImageSlider        className="ImageSlider"
-                width={width}
+                width={width-5}
                 height={height}
                 images={images}
                 showBullets={true}
