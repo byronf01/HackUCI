@@ -1,30 +1,32 @@
-{
-    "posts": {
-        "22": {
-            "date": "01/02/2023 19:38:41",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Convex_lens_%28magnifying_glass%29_and_upside-down_image.jpg/341px-Convex_lens_%28magnifying_glass%29_and_upside-down_image.jpg",
-            "description": "The Thinker ",
-            "tags": [
+export const posts = [
+             {
+            id: 22,
+            date: "01/02/2023 19:38:41",
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Convex_lens_%28magnifying_glass%29_and_upside-down_image.jpg/341px-Convex_lens_%28magnifying_glass%29_and_upside-down_image.jpg",
+            description: "The Thinker ",
+            tags: [
                 "Bio",
                 "Chem"
             ],
-            "authorID": 1857305,
-            "likes": 0,
-            "comments": []
+            authorID: 1857305,
+            likes: 0,
+            comments: 3
         },
-        "35": {
-            "date": "01/02/2023 19:38:41",
+         {
+            id: 31,
+            date: "01/02/2023 19:38:41",
             "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Convex_lens_%28magnifying_glass%29_and_upside-down_image.jpg/341px-Convex_lens_%28magnifying_glass%29_and_upside-down_image.jpg",
-            "description": "The Thinker ",
-            "tags": [
+            description: "The Thinker ",
+            tags: [
                 "Bio",
                 "Chem"
             ],
-            "authorID": 5364386,
-            "likes": 0,
-            "comments": []
+            authorID: 5364386,
+            likes: 0,
+            comments: 2
         }
-    },
+    ]
+/*
     "accounts": {
         "5364386": {
             "username": "hiyah",
@@ -48,3 +50,4 @@
         }
     }
 }
+*/
