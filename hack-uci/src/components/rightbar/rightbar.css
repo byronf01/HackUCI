@@ -1,4 +1,12 @@
 .rightbar{
     flex:2;
+    background: radial-gradient(circle at 10% 20%, rgb(161, 185, 207) 0%, rgb(244, 234, 184) 90%);
+    color: white
+}
+
+
+.rightbarWrapper{
+    padding: 20px;
 
 }
+

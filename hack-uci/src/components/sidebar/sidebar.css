@@ -4,6 +4,8 @@
     overflow-y: scroll;
     position: sticky;
     top: 50px;
+    background: radial-gradient(circle at 10% 20%, rgb(161, 185, 207) 0%, rgb(244, 234, 184) 90%);
+    color: rgb(14, 1, 1)
   }
   
   ::-webkit-scrollbar {
