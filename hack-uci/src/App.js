@@ -14,8 +14,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="Calendar" element={<Calendar />} />
-          {/* <Route path="Profile" element={<Club />} /> */}
-          <Route path="Post" element={<Club />} />
+           <Route path="Post" element={<Club />} />  
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>

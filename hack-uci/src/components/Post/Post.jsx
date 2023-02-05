@@ -5,7 +5,7 @@ export default function Post(post) {
     const handlePostButtonClick = () => {
         console.log('Hello World');
     };
-    
+    console.log(post)
     return (
         <div className="post">
             <div className="postWrapper">
@@ -13,13 +13,13 @@ export default function Post(post) {
                     <div className="postTopLeft">
                         <img className="postProfileImage" src="/Assets/Profile1.jpg" />
                         <span className="postUsername">Random Person</span>
-                        <span className="postDate">Days Ago</span>
+                        <span className="postDate">{post.date}</span>
                     </div>
                     <div className="postTopRight"></div>
                     <MoreVertIcon />
                 </div>
                 <div className="postCenter">
-                    <span className="postText">
+                    <span className={post?.description}>
                         Testing First Post
                     </span>
                     <img className="postImage" src="/Assets/Image1.png" />
@@ -29,10 +29,10 @@ export default function Post(post) {
                     <div className="postbottomLeft">
                         <img className="heartIcon" src="/Assets/Heart.png" alt="" />
                         <img className="likeIcon" src="/Assets/Like.png" alt="" />
-                        <span className="postlikeCounter">40 people liked it</span>
+                        <span className="postlikeCounter">{post.likes} people liked it</span>
                     </div>
                     <div className="postbottomRight"></div>
-                    <span className="postCommentText">12 Comments</span>
+                    <span className="postCommentText">{post?.comments} Comments</span>
                     <button id="post-button" onClick={handlePostButtonClick}>Post</button>
                 </div>
 
