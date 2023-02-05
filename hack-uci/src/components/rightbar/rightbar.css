@@ -1,7 +1,7 @@
 .rightbar{
     flex:2;
     background: radial-gradient(circle at 10% 20%, rgb(161, 185, 207) 0%, rgb(244, 234, 184) 90%);
-    color: white
+    color: rgb(9, 1, 1)
 }
 
 
@@ -10,3 +10,42 @@
 
 }
 
+.rightbarList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  
+.rightbarListItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 12px;
+    margin-top: 15px;
+
+  }
+  
+.rightbarIcon {
+    margin-right: 15px;
+  }
+
+.Title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+    margin-top: 15;
+
+  }
+
+.rightbarListItemText{
+    margin-left: 10px;
+
+}
+
+.rightbarClub{
+    height: 40px;
+    width: 50px;
+
+}
