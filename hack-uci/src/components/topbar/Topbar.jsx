@@ -34,7 +34,8 @@ export default function Topbar() {
               </ui>
             </ul>
           </nav>
-          <img src="/Assets/Image1.png" alt="" className="topbarImg"/>
+          <NavLink to="/log_in" className="nav-bar-link">
+          <img src="/Assets/Image1.png" alt="" className="topbarImg"/></NavLink>
         </div>
     );
   }

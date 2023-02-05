@@ -10,7 +10,9 @@ export default function Share() {
     };
 
     const handlePublishButtonClick = () => {
-        console.log(inputValue);
+        if (inputValue) {
+            console.log(inputValue);
+        }
     };
 
     return (
@@ -32,4 +34,5 @@ export default function Share() {
             </div>
         </div>
     );
+
 }

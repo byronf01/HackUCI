@@ -60,8 +60,9 @@ class Post:
         else:
             self.likes -= 1
 
-    def addComment(self, comment: Comment):
-        self.comments.append(comment)
+    def addComment(self, comment: str):
+        new_comment = Comment(comment, self.id)
+        self.comments.append(new_comment)
 
     def returnPostTime(self) -> str:
         return self.date
