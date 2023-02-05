@@ -24,3 +24,4 @@ Need to npm install these dependencies:
     "react-scripts": "^5.0.1",
     "react-simple-image-slider": "^2.4.1",
     "web-vitals": "^2.1.4"
+    
