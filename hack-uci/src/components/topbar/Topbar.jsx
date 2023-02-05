@@ -21,26 +21,19 @@ export default function Topbar() {
             />
           </div>
         </div>
-        {/* <div className="topbarRight"> */}
-          {/* <div className="topbarLinks"> */}
           <nav>
-            <ul className="topbarRight">
+            <ul className="nav-li">
             <ui>
-                <NavLink to="/profile" className="topbarLinks">Profile</NavLink>
+                <NavLink to="/profile" className="nav-bar-link">Profile</NavLink>
               </ui>
               <ui>
-                <NavLink to="/post" className="topbarLinks">Post</NavLink>
+                <NavLink to="/post" className="nav-bar-link">Post</NavLink>
               </ui>
               <ui>
-                <NavLink to="/calendar" className="topbarLinks">Calendar</NavLink>
+                <NavLink to="/calendar" className="nav-bar-link">Calendar</NavLink>
               </ui>
             </ul>
           </nav>
-            {/* <span className="topbarLink">Friends</span>
-            <span className="topbarLink">Events</span>
-            <span className="topbarLink">Calander</span> */}
-          {/* </div> */}
-        {/* </div> */}
           <img src="/Assets/Image1.png" alt="" className="topbarImg"/>
         </div>
     );

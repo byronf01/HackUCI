@@ -20,9 +20,9 @@ def getUsers():
             u["username"],
             u["password"],
             u["bio"],
-            u["pfp"],
             u["followers"],
             u["posts"],
+            u["pfp"]
         )
         new_users[new_user.id] = new_user
 
@@ -72,7 +72,6 @@ def writeData(accounts: dict[Account]):
             "joinDate": a.joinDate,
             "posts": a.posts,
         }
-    all_accounts = json.dumps(new_data, indent=4) # unneeded? 
 
     # write final changes to data.json
     with open(np, "r") as f:

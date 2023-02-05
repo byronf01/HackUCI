@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..",
 from src.classes.post import Post
 
 
-def read_new():  # returns dict of Posts
+def read_new():  # returns dict of Posts and list of (authorID, postID)
     newFile = os.path.join(
         os.path.dirname(__file__), "..", "..", "public", "new_posts.json"
     )
@@ -16,6 +16,7 @@ def read_new():  # returns dict of Posts
     f = open(new_path)
     data = json.load(f)
     new_posts = dict()
+    post_id_to_acc_id = []
 
     for p in data["posts"]:
         new_post = Post(
@@ -28,8 +29,9 @@ def read_new():  # returns dict of Posts
             p["comments"],
         )
         new_posts[new_post.id] = new_post
+        post_id_to_acc_id.append((p["authorID"], new_post.id))
 
-    return new_posts
+    return (new_posts, post_id_to_acc_id)
 
 
 def get_old():  # returns dict of Posts
@@ -63,7 +65,7 @@ def print_posts(posts: dict[Post]):
         print(str(id) + ": " + p.toString())
 
 
-def write_data(posts: dict[Post]):
+def write_data(posts: dict[Post], new_pairs):
     newFile = os.path.join(os.path.dirname(__file__), "..", "..", "public", "data.json")
     new_path = Path(newFile)
     new_data = dict()
@@ -78,13 +80,18 @@ def write_data(posts: dict[Post]):
             "likes": p.likes,
             "comments": p.comments,
         }
-
-    all_posts = json.dumps(new_data, indent=4)
     
     # write final changes to data.json
     with open(new_path, "r") as f:
         data = json.load(f)
         data["posts"] = new_data
+    # match post ids to accounts
+    for authorID, postID in new_pairs:
+        try:
+            data["accounts"]["posts"].append(postID)
+        except:
+            raise KeyError("No author exists for this post")
+    
     os.remove(new_path)
     with open(new_path, "w") as f:
         json.dump(data, f, indent=4)
@@ -104,11 +111,10 @@ def write_data(posts: dict[Post]):
 
 
 if __name__ == "__main__":
-    new_changes = read_new()
-    # print_posts(new_changes)
+    new_changes, new_pairs = read_new()
     old = get_old()
     if old:
         old.update(new_changes)
     else:
         old = new_changes
-    write_data(old)
+    write_data(old, new_pairs)

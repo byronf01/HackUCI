@@ -15,13 +15,24 @@ class Account(object):
     ):
         if id == 0: self.id = randint(1000000, 9999999)
         else: self.id = id
+
         self.username = username
         self.password = password
-        self.pfp = pfp
-        self.bio = bio
+
+        if pfp == None:
+            self.pfp = "https://i.pinimg.com/originals/73/17/a5/7317a548844e0d0cccd211002e0abc45.jpg"
+        else:
+            self.pfp = pfp
+        
+        if bio == None:
+            self.bio = ""
+        else: self.bio = bio
+
         self.followers = 0
         self.joinDate = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-        self.posts = posts
+        if posts == None:
+            self.posts = []
+        else: self.posts = posts
 
     def login(self, username, password) -> bool:
         if username == self.username and password == self.password:

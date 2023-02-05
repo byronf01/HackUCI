@@ -1,7 +1,8 @@
 .topbarContainer{
     height: 50px;
     width: 100%;
-    background-color: #1540c3;
+    /* background-color: #1540c3; */
+    background-color: black;
     display: flex;
     align-items: center;
     position:sticky;
@@ -9,7 +10,7 @@
 }
 
 .topbarLeft{
-    flex: 3;
+    flex: 2;
 
 }
 .topbarCenter{
@@ -17,7 +18,7 @@
 
 }
 .topbarRight{
-    flex: 2;
+    flex: 6;
 
 }
 
@@ -26,9 +27,9 @@
     margin-left: 15px;
     margin-right: 15px;
     font-weight: bold;
-    color: rgb(223, 160, 160);
+    color: white;
     cursor: pointer;
-    text-shadow: 1px 2px #eaeaea;
+    text-decoration: none;
 }
 
 .topbarImg {
@@ -40,7 +41,7 @@
 }
 
 .searchbar{
-    width: 100%;
+    width: 80%;
     height: 30px;
     background-color: white;
     border-radius: 30px;
@@ -70,11 +71,11 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    color: rgb(216, 216, 21)
+    color: rgb(216, 216, 21);
 }
 
 .topbarLink{
-    margin-right: 10px;
+    margin-right: 0px;
     font-size: 14px;
     cursor: pointer;
     align-items: right;
@@ -107,4 +108,23 @@
     justify-content: center;
     font-size: 12px;
 
+}
+
+.navbar-li{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(216, 216, 21);
+    /* display: inline-block; */
+    /* padding: 10px; */
+}
+
+.nav-bar-link{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar-link:hover{
+    color: yellow;
 }

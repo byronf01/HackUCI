@@ -15,3 +15,9 @@
     display: flex;
 }
 
+.largeError{
+    font-size: 100px;
+    padding-bottom: 272px;
+    padding-top: 272px;
+}
+
