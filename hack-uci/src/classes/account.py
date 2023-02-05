@@ -11,8 +11,10 @@ class Account(object):
         followers=0,
         posts=[],
         pfp="https://i.pinimg.com/originals/73/17/a5/7317a548844e0d0cccd211002e0abc45.jpg",
+        id=0
     ):
-        self.id = randint(1000000, 9999999)
+        if id == 0: self.id = randint(1000000, 9999999)
+        else: self.id = id
         self.username = username
         self.password = password
         self.pfp = pfp
@@ -52,12 +54,12 @@ class Account(object):
 
     def toString(self):
         s = ""
-        s += f"ID: {self.id}"
-        s += f"Username: {self.username}"
-        s += f"Password: {self.password}"
-        s += f"PFP link: {self.pfp}"
-        s += f"Bio: {self.bio}"
-        s += f"Followers: {self.followers}"
-        s += f"Join Date: {self.joinDate}"
-        s += f"Post IDs: {self.posts}"
+        s += f"ID: {self.id}\n"
+        s += f"Username: {self.username}\n"
+        s += f"Password: {self.password}\n"
+        s += f"PFP link: {self.pfp}\n"
+        s += f"Bio: {self.bio}\n"
+        s += f"Followers: {self.followers}\n"
+        s += f"Join Date: {self.joinDate}\n"
+        s += f"Post IDs: {self.posts}\n"
         return s
