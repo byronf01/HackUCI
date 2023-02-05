@@ -38,13 +38,12 @@ def get_old():  # returns dict of Posts
 
     with open(new_path, "r") as f:
         adict = f.read()
-    if adict == "":
-        return dict()
-    adict = eval(adict)
+    
+    temp = eval(adict)
 
     old_data = dict()
 
-    for id, p in adict.items():
+    for id, p in temp["posts"].items():
         post = Post(
             p["date"],
             p["image"],
@@ -79,18 +78,29 @@ def write_data(posts: dict[Post]):
             "likes": p.likes,
             "comments": p.comments,
         }
+
     all_posts = json.dumps(new_data, indent=4)
+    
     # write final changes to data.json
-    with open(new_path, "w") as storage:
-        storage.write(all_posts)
+    with open(new_path, "r") as f:
+        data = json.load(f)
+        data["posts"] = new_data
+    os.remove(new_path)
+    with open(new_path, "w") as f:
+        json.dump(data, f, indent=4)
 
     secondFile = os.path.join(
         os.path.dirname(__file__), "..", "..", "public", "data.py"
     )
-    data = Path(secondFile)
+    np = Path(secondFile)
     # write final changes to data.py
-    with open(data, "w") as f:
-        f.write(str(new_data))
+    with open(np, "r") as f:
+        adict = f.read()
+        cur = eval(adict)
+        cur["posts"] = new_data
+    os.remove(np)
+    with open(np, 'w') as f:
+        f.write(str(cur))
 
 
 if __name__ == "__main__":

@@ -72,15 +72,12 @@ def writeData(accounts: dict[Account]):
             "joinDate": a.joinDate,
             "posts": a.posts,
         }
-    all_accounts = json.dumps(new_data, indent=4)
-    # print(all_accounts)
+    all_accounts = json.dumps(new_data, indent=4) # unneeded? 
 
     # write final changes to data.json
     with open(np, "r") as f:
         data = json.load(f)
         data["accounts"] = new_data
-
-    # print(data)
 
     os.remove(np)
     with open(np, 'w') as f:
@@ -88,7 +85,7 @@ def writeData(accounts: dict[Account]):
     
 
     sec = os.path.join(
-        os.path.dirname(__file__), "..", "..", "public", "data.py"  # CHANGE THIS LATER
+        os.path.dirname(__file__), "..", "..", "public", "data.py"  
     )
     data = Path(sec)
 
