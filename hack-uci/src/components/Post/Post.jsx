@@ -1,11 +1,11 @@
 import "./post.css"
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-export default function Post() {
+export default function Post(post) {
     const handlePostButtonClick = () => {
         console.log('Hello World');
     };
-
+    
     return (
         <div className="post">
             <div className="postWrapper">
