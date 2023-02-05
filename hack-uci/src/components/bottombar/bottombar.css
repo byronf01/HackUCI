@@ -3,6 +3,6 @@
     background-color: #1540c3;
     display: flex;
     align-items: center;
-    position:sticky;
+    vertical-align: bottom;
     top: 0;
 }
